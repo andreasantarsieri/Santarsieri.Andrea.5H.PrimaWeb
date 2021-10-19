@@ -1,0 +1,25 @@
+@model List<Persona>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Persone</h1>
+    <table>
+    <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Cognome</th>
+    </tr>
+    <tbody>@foreach (Persona P in Model)
+    {
+        <tr>
+    <td>@P.Id</td>
+    <td>@P.Nome</td>
+    <td>@P.Cognome</td>
+    </tr>
+
+    }
+    </tbody>
+    </table>
+</div>
