@@ -7,9 +7,10 @@ namespace Santarsieri.Andrea._5H.PrimaWeb.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        [Required(ErrorMessage="Inserisci un cognome")]
-        [EmailAddress]
         public string Cognome { get; set; }
+        [Required(ErrorMessage="Inserisci un'email valida")]
+        [EmailAddress]
+        public string EMail{ get; set; }
 
        
     }

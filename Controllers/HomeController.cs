@@ -30,11 +30,8 @@ namespace Santarsieri.Andrea._5H.PrimaWeb.Controllers
 
         public IActionResult Persone()
         {
-            List<Persona> P = new List<Persona>();
-           
-                P.Add(new Persona{Id=1,Nome="Pippo",Cognome="Baudo"});
-                P.Add(new Persona{Id=2,Nome="Luca",Cognome="Gianni"});
-            return View(P);
+            var Db = new PersoneContext();
+            return View(Db.Persone);
             
              
         }
